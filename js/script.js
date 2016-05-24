@@ -1,9 +1,3 @@
-// -- FIXES --
-// EMPTY SEARCH BUTTON FIX
-// CLEAR SEARCH OPTION
-// NEW BACKGROUND
-
-
 // SHOW ABOUT SECTION START
 $('#show-about').on('click', function() {
 	// We need to display flex the main nav
