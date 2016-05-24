@@ -115,6 +115,7 @@ recipeFinder.displayResults = function(results) {
 	var recipeObjects = results.matches;
 	recipeObjects = recipeFinder.shuffle(recipeObjects);
 	if(recipeObjects.length > 0) {
+		// Loop through the results
 		for(i = 0; i < recipeObjects.length; i++) {
 			var recipeName = recipeObjects[i].recipeName;
 			// Because no large image is provided, we replace the default [s90] with [s250] 
@@ -125,13 +126,11 @@ recipeFinder.displayResults = function(results) {
 			if(i < 10) {
 				$('.results').append('<div id="recipe-item'+ i + '" class="yummly"></div>')
 			}
-
+			// Hiding the other 10, to be displayed later on
 			else {
 				$('.results').append('<div id="recipe-item'+ i + '" class="yummly hidden"></div>')
 			}
 
-			// Adding div
-			// Image
 			// Add a div, then add an image as the background-image of that div
 			$('#recipe-item' + i).append('<div id="recipe-image'+ i + '" class="recipe-images"></div>');
 			// Then the background-image
