@@ -24,6 +24,7 @@ var checkAbout = function() {
 		$('#about').text('about');
 	}
 };
+
 $('#show-about').on('click', function() {
 	// We need to display flex the main nav
 	$('.popup-about').toggleClass('show');
@@ -193,7 +194,7 @@ recipeFinder.displayResults = function(results) {
 	console.log(results);
 	recipeFinder.grabResults(results);
 	smoothScroll();
-	}
+}
 
 recipeFinder.formSubmit = function() {
 	// On submission of the form, we want to prevent the reload and log the users input
