@@ -1,9 +1,21 @@
+// SMOOTH SCROLL
+var smoothScroll = function() {
+	// Smooth scroll
+	$('html, body').animate({
+       scrollTop: $('.results').offset().top
+    }, 850);
+
+    // Added again, but for the top button
+    $('.back-to-top').on('click', function() {
+        $('html, body').animate({
+           scrollTop: $('#top').offset().top
+        }, 850);
+    });
+}
+
 // SHOW ABOUT SECTION START
-$('#show-about').on('click', function() {
-	// We need to display flex the main nav
-	$('.popup-about').toggleClass('show');
-	// If/else statement allows the text to change, allowing user to see how to close
-	// about popup easier
+// The checkAbout function will be called below, to change the text of the HTML on the header
+var checkAbout = function() {
 	var about = $('#about').text();
 	if (about === "about") {
 		$('#about').text('close');
@@ -11,19 +23,16 @@ $('#show-about').on('click', function() {
 	else {
 		$('#about').text('about');
 	}
+};
+$('#show-about').on('click', function() {
+	// We need to display flex the main nav
+	$('.popup-about').toggleClass('show');
+	checkAbout();
 });
 
 $('#close-about').on('click', function() {
 	$('.popup-about').removeClass('show');
-	// Repeating from earlier function, just this time it's if you click
-	// On the 'close-about' option
-	var about = $('#about').text();
-	if (about === "about") {
-		$('#about').text('close');
-	}
-	else  {
-		$('#about').text('about');
-	}
+	checkAbout();
 });
 
 // SHOW ABOUT END
@@ -109,9 +118,7 @@ recipeFinder.reset = function() {
     });
 };
 
-recipeFinder.displayResults = function(results) {
-	// We then access our information that we stored within this method
-	console.log(results);
+recipeFinder.grabResults = function(results) {
 	var recipeObjects = results.matches;
 	recipeObjects = recipeFinder.shuffle(recipeObjects);
 	if(recipeObjects.length > 0) {
@@ -123,6 +130,7 @@ recipeFinder.displayResults = function(results) {
 			var recipeLink = "http://www.yummly.com/recipe/" + recipeObjects[i].id;
 			var recipeCookTime = recipeObjects[i].totalTimeInSeconds / 60;
 			var recipeStyle = recipeObjects[i].attributes.course;
+			// New if/else nested within
 			if(i < 10) {
 				$('.results').append('<div id="recipe-item'+ i + '" class="yummly"></div>')
 			}
@@ -178,22 +186,16 @@ recipeFinder.displayResults = function(results) {
 			});
 			$('#results-see-more').hide();
 		}
+}
 
-		// Smooth scroll
-		$('html, body').animate({
-	       scrollTop: $('.results').offset().top
-	    }, 850);
-
-	    // Added again, but for the top button
-	    $('.back-to-top').on('click', function() {
-	        $('html, body').animate({
-	           scrollTop: $('#top').offset().top
-	        }, 850);
-	    });
+recipeFinder.displayResults = function(results) {
+	// We then access our information that we stored within this method
+	console.log(results);
+	recipeFinder.grabResults(results);
+	smoothScroll();
 	}
 
-// The initialize function
-recipeFinder.init = function() {
+recipeFinder.formSubmit = function() {
 	// On submission of the form, we want to prevent the reload and log the users input
 	$('form').on('submit', function(e) {
 		// Preventing a reload when form is submitted 
@@ -214,14 +216,17 @@ recipeFinder.init = function() {
 		recipeFinder.getData(userSearch);
 		console.log(userSearch);	
 		$('.search-display').text('Currently searching for recipes containing' + userSearch);
+		// This clears the results when the user submits their choices 
+		$('#submit').on('click', function() {
+			$('.results').empty();
+			$('.results-intro').empty();
+		});
+	});
+}
 
-		// Now we call our results 
-	});
-	// This clears the results when the user submits their choices 
-	$('#submit').on('click', function() {
-		$('.results').empty();
-		$('.results-intro').empty();
-	});
+// The initialize function
+recipeFinder.init = function() {
+	recipeFinder.formSubmit();
 	// This adds the checkbox function to the init function
 	recipeFinder.checkboxClick();
 	// Adding the reset function to the init function
