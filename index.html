@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canadian Eats</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<!-- Icons courtesy of Noun Project. Bacon icon created by Jacob Halton, Nanaimo Bar created by Tamiko Young, Cod/Fish icon created by Joe Pictos, Ketchup Bottle created by Okan Benn, Soup icon created by Elves Sousa, Maple Syrup icon created by Evan Shuster, Tart icon created by Kirill Kolchenko, Beaver Tail icon created by Jacob Halton, -->
+	<!-- Recipes couresty of Yummly.com -->
+	<!-- Background courtesy of Pexels.com -->
+	<!-- Designed & Developed with the assistance of Carys Mills -->
+</head>
+<body>
+	<section class="hero-section" id="top">
+		<nav class="top-nav">
+			<div class="back-to-top">
+				<a href="#top">Top</a>
+			</div>
+			<div id="reset">
+				<a href="#top"><p>Reset Search</p></a>
+			</div>
+			<div class="search-display">
+				<p>Click on an ingredient to get started!</p>
+			</div>
+			<ul id="show-about">
+				<li id="about">about</li>
+			</ul>
+		</nav>
+		<nav class="popup-about">
+			<button id="close-about">Close [ X ]</button>
+			<h2>Find your perfect Canadianized recipe today!</h2>
+			<h3>Designed and developed by Jesse Noseworthy</h3>
+			<h4>This website was designed as a resource to help users find the perfect Canadian recipe. All recipes are courtesy of <a href="http://www.yummly.com/" target="_blank">Yummly.com</a> If you'd like to reach out with any feedback or support, you can <a href="mailto:noseworthyjesse@gmail.com" target="_blank">email me</a> or <a href="https://twitter.com/JesseNoseworthy" target="_blank">tweet me!</a></h4>
+			<div class="popup-about-icons">
+				<ul>
+					<li><a href="http://jessenoseworthy.com/" target="_blank"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li><a href="https://twitter.com/JesseNoseworthy" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="wrapper" id="hero-wrapper">
+			<div class="title">
+				<h1>Canada Day Recipe Finder</h1>
+			</div>
+			<div class="intro-content">
+				<div class="intro-content-text">
+					<img src="images/maple-leaf.png" alt="">
+					<h2>Welcome, eh!</h2>
+					<h5>Welcome to CanadianEats.co! This website offers a resource to help organize through Canada's diverse selection of food! To get started, click on an ingredient and hit submit. Don't be afraid to combine ingredients too! But be aware: sometimes there's such a thing as being a little too Canadian. Happy cooking!</h5>
+				</div>
+				<form action="">
+					<div class="ingredient">
+						<div class="ingredient-options">
+							<img src="images/bacon.png" alt="Canadian Bacon">
+							<label for="ingredientChoice1">Canadian Bacon</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice1" id="ingredientChoice1" name="ingredient" value=" Canadian Bacon">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/montreal-meat.png" alt="Montreal Smoked Meat">
+							<label for="ingredientChoice2">Montreal Smoked Meat</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice2" id="ingredientChoice2" name="ingredient" value=" Montreal Smoked Meat">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/cod.png" alt="Cod">
+							<label for="ingredientChoice3">Cod</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice3" id="ingredientChoice3" name="ingredient" value=" Cod">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/poutine.png" alt="Poutine">
+							<label for="ingredientChoice4">Poutine</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice4" id="ingredientChoice3" name="ingredient" value=" Poutine">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/soup.png" alt="Pea Soup">
+							<label for="ingredientChoice4">Pea Soup</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice4" id="ingredientChoice4" name="ingredient" value=" Pea Soup">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/syrup.png" alt="Maple Syrup">
+							<label for="ingredientChoice6">Maple Syrup</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice6" id="ingredientChoice5" name="ingredient" value=" Maple Syrup">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/tart.png" alt="Butter Tarts">
+							<label for="ingredientChoice7">Butter Tarts</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice7" id="ingredientChoice7" name="ingredient" value=" Butter Tarts">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/beaver-tail.png" alt="Beaver Tails">
+							<label for="ingredientChoice8">Beaver Tails</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice8" id="ingredientChoice8" name="ingredient" value=" Beaver Tails">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/bar.png" alt="Nanaimo Bars">
+							<label for="ingredientChoice9">Nanaimo Bars</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice9" id="ingredientChoice9" name="ingredient" value=" Nanaimo Bars">
+							</div>
+						</div>
+						
+						<div class="ingredient-options">
+							<img src="images/chocolate-bar.png" alt="Coffee Cris">
+							<label for="ingredientChoice10">Coffee Crisp</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice10" id="ingredientChoice10" name="ingredient" value=" Coffee Crisp">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/ketchup-chips.png" alt="Ketchup Chips">
+							<label for="ingredientChoice11">Ketchup Chips</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice11" id="ingredientChoice11" name="ingredient" value=" Ketchup Chips">
+							</div>
+						</div>
+
+						<div class="ingredient-options">
+							<img src="images/beer.png" alt="Molson Canadian">
+							<label for="ingredientChoice12">Beer</label>
+							<div class="check-whole-box">
+								<input type="checkbox" label="ingredientChoice12" id="ingredientChoice12" name="ingredient" value=" Beer">
+							</div>
+						</div>
+						<!-- TIM HORTONS COFFEE, CEASARS, CHEESE CURDS -->
+					</div>
+						<a href="#results"><input type="submit" id="submit" value="submit"></a>
+				</form>
+			</div>
+		</section>
+		<div class="results-intro">
+		</div>
+		<section class="results" id="results">
+		</section>
+		<footer>
+			<p>&copy; 2016 | Designed and Developed by <a target="_blank" href="http://jessenoseworthy.com/">Jesse Noseworthy</a></p>
+		</footer>
+	</div>
+
+<!-- JAVASCRIPT BELOW -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

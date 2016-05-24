@@ -1,0 +1,824 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/tiled-leaf.png);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-size: 8.5%;
+  background-repeat: space round;
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 10%;
+}
+
+.top-nav, footer {
+  background: rgba(0, 0, 0, 0.95);
+  margin-bottom: 75px;
+  height: 50px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 12%;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  text-transform: lowercase;
+}
+
+.top-nav ul, footer ul {
+  list-style-type: none;
+}
+
+.top-nav ul li, footer ul li {
+  transition: 0.3s ease;
+}
+
+.top-nav ul li:hover, footer ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.top-nav .back-to-top a, footer .back-to-top a {
+  text-decoration: none;
+  color: wheat;
+  list-style-type: none;
+}
+
+.top-nav .back-to-top a:hover, footer .back-to-top a:hover {
+  color: white;
+}
+
+#reset {
+  cursor: pointer;
+}
+
+#reset a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.popup-about {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  top: 0;
+  color: white;
+  font-weight: 100;
+  width: 100%;
+  right: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 30%;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.75s;
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  z-index: 1;
+}
+
+.popup-about h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.popup-about h3 {
+  font-style: italic;
+}
+
+.popup-about h4 {
+  font-weight: 300;
+  padding-top: 25px;
+  text-align: center;
+  line-height: 1.7rem;
+  letter-spacing: 0.065rem;
+}
+
+.popup-about button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  outline: none;
+  transiton: 0.5s ease;
+}
+
+.popup-about button:hover {
+  color: wheat;
+}
+
+.popup-about a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease;
+  font-weight: 700;
+}
+
+.popup-about a:hover {
+  color: wheat;
+}
+
+.popup-about-icons {
+  width: 100%;
+}
+
+.popup-about-icons ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.popup-about-icons ul li {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.popup-about-icons a {
+  color: white;
+  transition: 0.5s ease;
+}
+
+.popup-about-icons a:hover {
+  color: wheat;
+}
+
+.popup-about.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.hero-section {
+  height: 980px;
+  background: linear-gradient(rgba(255, 0, 0, 0.05), rgba(255, 0, 0, 0.05)), url("../images/forest2.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: wheat;
+}
+
+.title {
+  text-align: center;
+  margin: 3% 0%;
+}
+
+.title h1 {
+  font-family: 'Courgette', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.215rem;
+}
+
+.ingredient {
+  margin: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hero-wrapper {
+  background: rgba(255, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  top: 10%;
+}
+
+.ingredient-options.clicked {
+  background: rgba(0, 0, 0, 0.45);
+  transition: 0.3s ease;
+}
+
+.ingredient-options {
+  color: wheat;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2px;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% / 4 - 4px);
+  height: 150px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ingredient-options label, .ingredient-options input {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+  padding-top: 10px;
+  text-transform: lowercase;
+  letter-spacing: 0.055rem;
+}
+
+.ingredient-options img {
+  height: 45px;
+  margin: 10px;
+}
+
+.check-whole-box {
+  width: 120%;
+  height: 150px;
+  margin-top: -110px;
+}
+
+.check-whole-box input {
+  cursor: pointer;
+  opacity: 0;
+}
+
+#submit, .results-intro-active #randomize, #results-see-more {
+  height: 50px;
+  width: 140px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid wheat;
+  font-size: 1.2rem;
+  letter-spacing: 0.075rem;
+  margin: 20px;
+  color: wheat;
+  box-shadow: 0.5px 0.5px 4px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+#submit:hover, .results-intro-active #randomize:hover, #results-see-more:hover {
+  box-shadow: 0.5px 3.5px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.intro-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.intro-content-text {
+  width: 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 70px 110px 70px;
+}
+
+.intro-content-text h2 {
+  font-size: 1.7rem;
+  padding-bottom: 20px;
+}
+
+.intro-content-text h5 {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.065rem;
+}
+
+.intro-content-text img {
+  height: 110px;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 50%;
+  padding: 2% 5%;
+  text-align: center;
+}
+
+.results {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.results-intro-active {
+  padding: 5% 0;
+  text-align: center;
+}
+
+.results-intro-active h3 {
+  width: 100%;
+  padding-bottom: 20px;
+  font-size: 1.7rem;
+  letter-spacing: 0.055rem;
+}
+
+.results-intro-active #randomize {
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  width: 280px;
+  margin: 0 150px;
+  height: 55px;
+  text-transform: lowercase;
+  letter-spacing: 0.055rem;
+  font-weight: 300;
+}
+
+.results h1 {
+  width: 100%;
+  text-align: center;
+}
+
+#recipe-item0 {
+  margin-top: 100px;
+}
+
+.yummly {
+  height: 275px;
+  width: 60%;
+  box-shadow: 1px 1px 12px -1px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+}
+
+.yummly .recipe-images {
+  height: 227px;
+  width: 310px;
+  margin: 20px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.yummly .recipe-text {
+  height: 62%;
+  width: 55%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-content: flex-end;
+      -ms-flex-line-pack: end;
+          align-content: flex-end;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding: 5px;
+}
+
+.yummly .recipe-text h2 {
+  font-size: 1.8rem;
+}
+
+.yummly .recipe-text a {
+  text-decoration: none;
+  color: red;
+  text-transform: lowercase;
+  float: right;
+  padding-right: 3%;
+  transition: 0.3s ease;
+  font-weight: 400;
+}
+
+.yummly .recipe-text a:hover {
+  color: black;
+}
+
+#results-see-more {
+  width: 300px;
+  padding: 25px;
+  margin: 50px 25%;
+  height: 20px;
+  line-height: 0px;
+  background: rgba(0, 0, 0, 0.75);
+  text-transform: lowercase;
+  letter-spacing: 0.055rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#recipe-item19 {
+  margin-bottom: 50px;
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: wheat;
+  letter-spacing: 0.055rem;
+  font-weight: 300;
+  position: relative;
+  z-index: 5;
+}
+
+footer a {
+  text-decoration: none;
+  color: wheat;
+}
+
+footer p {
+  transition: 0.5s ease;
+}
+
+footer p:hover {
+  text-shadow: 0.5px 0.5px 3px black;
+}
+
+@media screen and (max-width: 970px) {
+  .top-nav, footer {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    height: 50px;
+  }
+  .top-nav .search-display, footer .search-display {
+    padding: 0px 20px;
+  }
+  .title h1 {
+    padding: 0 10px;
+  }
+  .hero-section {
+    height: 1165px;
+  }
+  .intro-content {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro-content-text {
+    width: 100%;
+    padding: 25px 50px;
+  }
+  form {
+    width: 100%;
+  }
+  .ingredient-options {
+    width: calc(100% / 6 - 4px);
+  }
+  .results-intro h3 {
+    padding: 0 10% 20px 10%;
+  }
+  .yummly {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .search-display {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .search-display {
+    display: none;
+  }
+  .hero-section {
+    height: 1385px;
+  }
+  .ingredient-options {
+    width: calc(100% / 4 - 4px);
+  }
+  .yummly {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .popup-about {
+    padding: 0 10%;
+    text-align: center;
+  }
+  .hero-section {
+    height: 100%;
+  }
+  .title h1 {
+    padding-top: 75px;
+  }
+  #hero-wrapper {
+    position: static;
+    top: 5%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .yummly {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 470px;
+    width: 70%;
+    margin-top: 10px;
+    padding: 20px;
+  }
+  .yummly .recipe-text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .ingredient-options {
+    width: calc(100% / 3 - 4px);
+  }
+  footer {
+    height: 80px;
+    text-align: center;
+    padding: 10px 40px;
+  }
+  .results-intro #randomize {
+    margin: 0;
+  }
+  .yummly .recipe-images {
+    height: 187px;
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .popup-about button {
+    padding: 70px 20px 20px 20px;
+  }
+  .ingredient-options {
+    width: calc(100% / 2 - 4px);
+  }
+  .results-intro h3 {
+    padding: 0 15% 20px 15%;
+  }
+  .yummly .recipe-images {
+    height: 147px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .ingredient-options {
+    width: calc(100% / 1 - 4px);
+  }
+  footer {
+    height: 100px;
+    line-height: 1.5rem;
+  }
+  .results-intro #randomize {
+    width: 220px;
+  }
+  .yummly .recipe-images {
+    height: 107px;
+    width: 180px;
+  }
+}
