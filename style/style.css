@@ -173,11 +173,10 @@ img {
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/tiled-leaf.png);
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/maple-leaf-bg.jpg);
   font-family: 'Lato', sans-serif;
+  background-attachment: fixed;
   font-weight: 300;
-  background-size: 8.5%;
-  background-repeat: space round;
   position: relative;
 }
 
@@ -215,6 +214,10 @@ body {
 
 .top-nav ul li:hover, footer ul li:hover {
   color: white;
+  cursor: pointer;
+}
+
+.top-nav .back-to-top, footer .back-to-top {
   cursor: pointer;
 }
 
