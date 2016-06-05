@@ -216,7 +216,12 @@ recipeFinder.formSubmit = function() {
 		// This loads our API call along with our search query 
 		recipeFinder.getData(userSearch);
 		console.log(userSearch);	
-		$('.search-display').text('Currently searching for recipes containing' + userSearch);
+		if (userSearch === "" ) {
+			$('.search-display').text('No items were selected, displaying randomized Canadian recipes');
+		}
+		else {
+			$('.search-display').text('Currently searching for recipes containing' + userSearch);
+		}
 		// This clears the results when the user submits their choices 
 		$('#submit').on('click', function() {
 			$('.results').empty();
