@@ -40,6 +40,7 @@ body {
 // TOP NAVBAR START
 .top-nav {
 	background: $faded-black;
+	color: white;
 	margin-bottom: 75px;
     height: 50px;
     display: flex;
@@ -65,7 +66,7 @@ body {
 		cursor: pointer;
 		a {
 			text-decoration: none;
-			color: wheat;
+			color: white;
 			list-style-type: none;	
 
 				&:hover {
@@ -79,7 +80,7 @@ body {
 	cursor: pointer;
 	a {
 		text-decoration: none;
-		color: wheat;
+		color: white;
 	}
 }
 
@@ -88,7 +89,7 @@ body {
 
 .popup-about {
 	position: fixed;
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,0.875);
 	height: 100%;
 	top: 0;
 	color: white;
@@ -209,6 +210,7 @@ body {
 		font-family: 'Courgette', sans-serif;
 		font-size: 3.5rem;
 		letter-spacing: 0.215rem;
+		color: white;
 	}
 }
 
@@ -221,19 +223,20 @@ body {
 }
 
 #hero-wrapper {
-	background: $faded-red;
+	background: rgba(255,0,0,0.7);
 	border-radius: 20px;
 	padding: 10px;
 	position: relative;
 	top: 10%;
 }
 .ingredient-options.clicked {
-	background: rgba(0,0,0,0.45);
+	background: rgba(22,22,22,0.45);
 	transition: 0.3s ease;
 }
 
 .ingredient-options {
-	color: wheat;
+	color: white;
+	font-weight: 300;
 	display: flex;
 	align-items: center;
 	margin: 2px;
@@ -276,11 +279,11 @@ body {
 	width: 140px;
 	border-radius: 20px;
 	background: transparent;
-	border: 1px solid wheat;
+	border: 1px solid white;
 	font-size: 1.2rem;
 	letter-spacing: 0.075rem;
 	margin: 20px;
-	color: wheat;
+	color: white;
 	box-shadow: 0.5px 0.5px 4px 2px rgba(0,0,0,0.3);
 	transition: 0.3s ease;
 
@@ -300,6 +303,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 0 70px 110px 70px;
+	color: white;
 
 	h2 {
 		font-size: 1.7rem;
@@ -372,12 +376,13 @@ form {
 	height: 275px;
 	width: 60%;
 	box-shadow: 1px 1px 12px -1px rgba(0,0,0,0.4);
-	border: 1px solid rgba(0,0,0,0.4);
+	// border: 1px solid rgba(0,0,0,0.4);
+	border-radius: 20px;
 	margin: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: white;
+	background: rgba(255,0,0,0.8);
 
 	.recipe-images {
 		height: 227px;
@@ -395,22 +400,29 @@ form {
 		align-content: flex-end;
 		justify-content: space-around;
 		padding: 5px;
+		color: white;
 
 		h2 {
 			font-size: 1.8rem;
+			font-weight: 500;
+		}
+
+		h3,
+		h4 {
+			font-weight: 300;
 		}
 
 		a {
 			text-decoration: none;
-			color: red;
-			text-transform: lowercase;
+			color: white;
+			text-transform: uppercase;
 			float: right;
 			padding-right: 3%;
-			transition: 0.3s ease;
-			font-weight: 400;
+			transition: 0.8s ease;
+			font-weight: 600;
 
 			&:hover {
-				color: black;
+				color: wheat;
 			}
 			}
 		}
@@ -444,7 +456,7 @@ footer {
 	padding: 0;
 	margin: 0;
 	justify-content: center;
-	color: wheat;
+	color: white;
 	letter-spacing: 0.055rem;
 	font-weight: 300;
 	position: relative;
@@ -452,7 +464,7 @@ footer {
 
 	a {
 		text-decoration: none;
-		color: wheat;
+		color: white;
 	}
 
 	p {
