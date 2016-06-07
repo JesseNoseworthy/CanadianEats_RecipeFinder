@@ -173,7 +173,7 @@ img {
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/maple-leaf-bg.jpg);
+  background: #352d38;
   font-family: 'Lato', sans-serif;
   background-attachment: fixed;
   font-weight: 300;
@@ -186,7 +186,7 @@ body {
 
 .top-nav, footer {
   background: rgba(0, 0, 0, 0.95);
-  color: white;
+  color: #FCFFF0;
   margin-bottom: 75px;
   height: 50px;
   display: -webkit-flex;
@@ -214,7 +214,7 @@ body {
 }
 
 .top-nav ul li:hover, footer ul li:hover {
-  color: white;
+  color: #FCFFF0;
   cursor: pointer;
 }
 
@@ -224,12 +224,12 @@ body {
 
 .top-nav .back-to-top a, footer .back-to-top a {
   text-decoration: none;
-  color: white;
+  color: #FCFFF0;
   list-style-type: none;
 }
 
 .top-nav .back-to-top a:hover, footer .back-to-top a:hover {
-  color: white;
+  color: #FCFFF0;
 }
 
 #reset {
@@ -238,7 +238,7 @@ body {
 
 #reset a {
   text-decoration: none;
-  color: white;
+  color: #FCFFF0;
 }
 
 .popup-about {
@@ -246,7 +246,7 @@ body {
   background: rgba(0, 0, 0, 0.875);
   height: 100%;
   top: 0;
-  color: white;
+  color: #FCFFF0;
   font-weight: 100;
   width: 100%;
   right: 0;
@@ -294,7 +294,7 @@ body {
 .popup-about button {
   background: transparent;
   border: none;
-  color: white;
+  color: #FCFFF0;
   padding: 20px;
   font-size: 1.3rem;
   text-transform: lowercase;
@@ -308,7 +308,7 @@ body {
 
 .popup-about a {
   text-decoration: none;
-  color: white;
+  color: #FCFFF0;
   transition: 0.5s ease;
   font-weight: 700;
 }
@@ -341,7 +341,7 @@ body {
 }
 
 .popup-about-icons a {
-  color: white;
+  color: #FCFFF0;
   transition: 0.5s ease;
 }
 
@@ -387,7 +387,7 @@ body {
   font-family: 'Courgette', sans-serif;
   font-size: 3.5rem;
   letter-spacing: 0.215rem;
-  color: white;
+  color: #FCFFF0;
 }
 
 .ingredient {
@@ -420,7 +420,7 @@ body {
 }
 
 .ingredient-options {
-  color: white;
+  color: #FCFFF0;
   font-weight: 300;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -468,21 +468,21 @@ body {
 }
 
 #submit, .results-intro-active #randomize, #results-see-more {
+  background: #FCFFF0;
   height: 50px;
   width: 140px;
   border-radius: 20px;
-  background: transparent;
-  border: 1px solid white;
+  border: none;
   font-size: 1.2rem;
   letter-spacing: 0.075rem;
   margin: 20px;
-  color: white;
-  box-shadow: 0.5px 0.5px 4px 2px rgba(0, 0, 0, 0.3);
+  color: black;
+  box-shadow: 0.5px 0.5px 4px 2px rgba(129, 3, 3, 0.7);
   transition: 0.3s ease;
 }
 
 #submit:hover, .results-intro-active #randomize:hover, #results-see-more:hover {
-  box-shadow: 0.5px 3.5px 4px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5px 3.5px 4px 3px rgba(129, 3, 3, 0.7);
 }
 
 .intro-content {
@@ -506,12 +506,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 70px 110px 70px;
-  color: white;
+  color: #FCFFF0;
 }
 
 .intro-content-text h2 {
   font-size: 1.7rem;
   padding-bottom: 20px;
+  font-family: 'Courgette', sans-serif;
 }
 
 .intro-content-text h5 {
@@ -557,18 +558,21 @@ form {
   padding-bottom: 20px;
   font-size: 1.7rem;
   letter-spacing: 0.055rem;
+  color: #FCFFF0;
 }
 
 .results-intro-active #randomize {
   border: 1px solid black;
-  background: rgba(0, 0, 0, 0.95);
-  color: white;
+  box-shadow: none;
   width: 280px;
   margin: 0 150px;
   height: 55px;
   text-transform: lowercase;
   letter-spacing: 0.055rem;
-  font-weight: 300;
+}
+
+.results-intro-active #randomize:hover {
+  box-shadow: none;
 }
 
 .results h1 {
@@ -592,9 +596,9 @@ form {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: rgba(255, 0, 0, 0.8);
 }
 
@@ -607,7 +611,7 @@ form {
 }
 
 .yummly .recipe-text {
-  height: 62%;
+  height: 90%;
   width: 55%;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -618,16 +622,23 @@ form {
   -webkit-align-content: flex-end;
       -ms-flex-line-pack: end;
           align-content: flex-end;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 5px;
-  color: white;
+  color: #FCFFF0;
+  position: relative;
+}
+
+.yummly .recipe-text h3,
+.yummly .recipe-text h4 {
+  padding-bottom: 12.5px;
 }
 
 .yummly .recipe-text h2 {
   font-size: 1.8rem;
   font-weight: 500;
+  padding-bottom: 12.5px;
 }
 
 .yummly .recipe-text h3,
@@ -637,12 +648,15 @@ form {
 
 .yummly .recipe-text a {
   text-decoration: none;
-  color: white;
+  color: #FCFFF0;
   text-transform: uppercase;
   float: right;
   padding-right: 3%;
   transition: 0.8s ease;
   font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
 }
 
 .yummly .recipe-text a:hover {
@@ -674,7 +688,7 @@ footer {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  color: #FCFFF0;
   letter-spacing: 0.055rem;
   font-weight: 300;
   position: relative;
@@ -683,7 +697,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: white;
+  color: #FCFFF0;
 }
 
 footer p {

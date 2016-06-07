@@ -23,10 +23,11 @@ img {
 }
 
 body {
-	background: linear-gradient(
-      rgba(255, 255, 255, 0.7), 
-      rgba(255, 255, 255, 0.7)
-    ), url(../images/maple-leaf-bg.jpg);
+	// background: linear-gradient(
+ //      rgba(255, 255, 255, 0.7), 
+ //      rgba(255, 255, 255, 0.7)
+ //    ), url(../images/maple-leaf-bg.jpg);
+ 	background: rgb(53,45,56);
 	font-family: 'Lato', sans-serif;
 	background-attachment: fixed;
 	font-weight: 300;
@@ -40,7 +41,7 @@ body {
 // TOP NAVBAR START
 .top-nav {
 	background: $faded-black;
-	color: white;
+	color: #FCFFF0;
 	margin-bottom: 75px;
     height: 50px;
     display: flex;
@@ -57,7 +58,7 @@ body {
 		li {
 			transition: 0.3s ease;
 			&:hover {
-				color: white;
+				color: #FCFFF0;
 				cursor: pointer;
 			}
 		}
@@ -66,11 +67,11 @@ body {
 		cursor: pointer;
 		a {
 			text-decoration: none;
-			color: white;
+			color: #FCFFF0;
 			list-style-type: none;	
 
 				&:hover {
-					color: white;
+					color: #FCFFF0;
 				}
 		}
 	}
@@ -80,7 +81,7 @@ body {
 	cursor: pointer;
 	a {
 		text-decoration: none;
-		color: white;
+		color: #FCFFF0;
 	}
 }
 
@@ -92,7 +93,7 @@ body {
 	background: rgba(0,0,0,0.875);
 	height: 100%;
 	top: 0;
-	color: white;
+	color: #FCFFF0;
 	font-weight: 100;
 	width: 100%;
 	right: 0;
@@ -129,7 +130,7 @@ body {
 	button {
 		background: transparent;
 		border: none;
-		color: white;
+		color: #FCFFF0;
 		padding: 20px;
 		font-size: 1.3rem;
 		text-transform: lowercase;
@@ -143,7 +144,7 @@ body {
 
 	a {
 		text-decoration: none;
-		color: white;
+		color: #FCFFF0;
 		transition: 0.5s ease;
 		font-weight: 700;
 		
@@ -170,7 +171,7 @@ body {
 	}
 
 	a {
-		color: white;
+		color: #FCFFF0;
 		transition: 0.5s ease;
 		
 		&:hover {
@@ -210,7 +211,7 @@ body {
 		font-family: 'Courgette', sans-serif;
 		font-size: 3.5rem;
 		letter-spacing: 0.215rem;
-		color: white;
+		color: #FCFFF0;
 	}
 }
 
@@ -235,7 +236,7 @@ body {
 }
 
 .ingredient-options {
-	color: white;
+	color: #FCFFF0;
 	font-weight: 300;
 	display: flex;
 	align-items: center;
@@ -275,20 +276,20 @@ body {
 }
 
 #submit {
+	background: #FCFFF0;
 	height: 50px;
 	width: 140px;
 	border-radius: 20px;
-	background: transparent;
-	border: 1px solid white;
+	border: none;
 	font-size: 1.2rem;
 	letter-spacing: 0.075rem;
 	margin: 20px;
-	color: white;
-	box-shadow: 0.5px 0.5px 4px 2px rgba(0,0,0,0.3);
+	color: black;
+	box-shadow: 0.5px 0.5px 4px 2px rgba(129, 3, 3, 0.7);
 	transition: 0.3s ease;
 
 	&:hover {
-		box-shadow: 0.5px 3.5px 4px 3px rgba(0,0,0,0.3);
+		box-shadow: 0.5px 3.5px 4px 3px rgba(129, 3, 3, 0.7);
 	}
 }
 
@@ -303,11 +304,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 0 70px 110px 70px;
-	color: white;
+	color: #FCFFF0;
 
 	h2 {
 		font-size: 1.7rem;
 		padding-bottom: 20px;
+		font-family: 'Courgette', sans-serif;
 	}
 
 	h5 {
@@ -347,19 +349,22 @@ form {
 		padding-bottom: 20px;
 		font-size: 1.7rem;
 		letter-spacing: 0.055rem;
+		color: #FCFFF0;
 	}
 
 	#randomize {
 		@extend #submit;
 		border: 1px solid black;
-		background: $faded-black;
-		color: white;
+		box-shadow: none;
 		width: 280px;
 		margin: 0 150px;
 		height: 55px;
 		text-transform: lowercase;
 		letter-spacing: 0.055rem;
-		font-weight: 300;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 }
 
@@ -381,7 +386,7 @@ form {
 	margin: 20px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	background: rgba(255,0,0,0.8);
 
 	.recipe-images {
@@ -393,18 +398,24 @@ form {
 	}
 
 	.recipe-text {
-		height: 62%;
+		height: 90%;
 		width: 55%;
 		display: flex;
 		flex-direction: column;
 		align-content: flex-end;
-		justify-content: space-around;
+		justify-content: flex-start;
 		padding: 5px;
-		color: white;
+		color: #FCFFF0;
+		position: relative;
 
+		h3,
+		h4 {
+			padding-bottom: 12.5px;
+		}
 		h2 {
 			font-size: 1.8rem;
 			font-weight: 500;
+			padding-bottom: 12.5px;
 		}
 
 		h3,
@@ -414,12 +425,15 @@ form {
 
 		a {
 			text-decoration: none;
-			color: white;
+			color: #FCFFF0;
 			text-transform: uppercase;
 			float: right;
 			padding-right: 3%;
 			transition: 0.8s ease;
 			font-weight: 600;
+			position: absolute;
+			bottom: 0;
+			padding-bottom: 10px;
 
 			&:hover {
 				color: wheat;
@@ -456,7 +470,7 @@ footer {
 	padding: 0;
 	margin: 0;
 	justify-content: center;
-	color: white;
+	color: #FCFFF0;
 	letter-spacing: 0.055rem;
 	font-weight: 300;
 	position: relative;
@@ -464,7 +478,7 @@ footer {
 
 	a {
 		text-decoration: none;
-		color: white;
+		color: #FCFFF0;
 	}
 
 	p {
