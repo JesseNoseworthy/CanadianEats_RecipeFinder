@@ -18,29 +18,19 @@ var smoothScroll = function() {
 var checkAbout = {
 	// Empty array for checkabout
 }
-checkAbout.changeText = function() {
-	var about = $('#about').text();
-	if (about === "about") {
-		$('#about').text('close');
-	}
-	else {
-		$('#about').text('about');
-	}
-};
 
 checkAbout.toggle = function() {
 	$('#show-about').on('click', function() {
 		// We need to display flex the main nav
 		$('.popup-about').toggleClass('show');
-		checkAbout();
+		$('#about').text('close');
 	});
 
 	$('#close-about').on('click', function() {
 		$('.popup-about').removeClass('show');
-		checkAbout();
+		$('#about').text('about');
 	});
 };
-
 
 // SHOW ABOUT END
 
@@ -239,7 +229,6 @@ recipeFinder.formSubmit = function() {
 // The initialize function
 recipeFinder.init = function() {
 	// The about functions
-	checkAbout.changeText();
 	checkAbout.toggle();
 	recipeFinder.formSubmit();
 	// This adds the checkbox function to the init function
