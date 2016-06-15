@@ -15,7 +15,10 @@ var smoothScroll = function() {
 
 // SHOW ABOUT SECTION START
 // The checkAbout function will be called below, to change the text of the HTML on the header
-var checkAbout = function() {
+var checkAbout = {
+	// Empty array for checkabout
+}
+checkAbout.changeText = function() {
 	var about = $('#about').text();
 	if (about === "about") {
 		$('#about').text('close');
@@ -25,16 +28,19 @@ var checkAbout = function() {
 	}
 };
 
-$('#show-about').on('click', function() {
-	// We need to display flex the main nav
-	$('.popup-about').toggleClass('show');
-	checkAbout();
-});
+checkAbout.toggle = function() {
+	$('#show-about').on('click', function() {
+		// We need to display flex the main nav
+		$('.popup-about').toggleClass('show');
+		checkAbout();
+	});
 
-$('#close-about').on('click', function() {
-	$('.popup-about').removeClass('show');
-	checkAbout();
-});
+	$('#close-about').on('click', function() {
+		$('.popup-about').removeClass('show');
+		checkAbout();
+	});
+};
+
 
 // SHOW ABOUT END
 
@@ -232,6 +238,9 @@ recipeFinder.formSubmit = function() {
 
 // The initialize function
 recipeFinder.init = function() {
+	// The about functions
+	checkAbout.changeText();
+	checkAbout.toggle();
 	recipeFinder.formSubmit();
 	// This adds the checkbox function to the init function
 	recipeFinder.checkboxClick();

@@ -450,9 +450,14 @@ form {
 	margin: 50px 25%;
 	height: 20px;
 	line-height: 0px;
-	background: rgba(0,0,0,0.75);
+	background: #FCFFF0;
+	box-shadow: none;
 	text-transform: lowercase;
 	letter-spacing: 0.055rem;
+
+	&:hover {
+		box-shadow: none;
+	}
 }
 
 .hidden {
