@@ -1,4 +1,4 @@
-#Canadian Eats Recipe Finder
+# Canadian Eats Recipe Finder
 
 This website was designed and developed as part of HackerYou's Front-End Website Development bootcamp. Within it I've utilized HTML, CSS, Sass, JavaScript, jQuery and Ajax. 
 
